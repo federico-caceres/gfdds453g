@@ -16,6 +16,9 @@ export class App extends Component {
           <Link to="/page2">Page 2</Link>
         </nav>
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/page1"/>
+          </Route>
           <Route path="/page1" children={Page1}/>
           <Route path="/page2" children={Page2}/>
           <Route path="*" children={NotFound}/>
